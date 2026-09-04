@@ -45,6 +45,25 @@ The metrics separate role safety from SQL correctness, which is the point.
 5. EVEN THE BEST ANSWER ACCURACY IS 0.50. On a realistic enterprise schema (59 tables, RBAC,
    approvals, policy documents) the best of ten known techniques is right about half the time.
 
+## Stability (3 repeated runs)
+Each architecture was run 3 times. Every metric's standard deviation across runs is <= 0.016
+(most are 0.000 to 0.010), so the single-run table above is representative and the findings are
+reproducible, not luck. Full mean +/- std in benchmark_scores_repeats.json.
+
+## Validator-gate ablation (chain_of_agents, arch 10)
+The gate is what made this design the execution-success winner. Running the chain with the gate ON vs
+OFF on the 94 questions (ablation_validator.json):
+| metric | gate ON | gate OFF | ON - OFF |
+|---|---|---|---|
+| answer_accuracy   | 0.38 | 0.36 | +0.020 |
+| RBAC_violation    | 0.436 | 0.447 | +0.011 |
+| refusal_correct   | 0.068 | 0.068 | 0.000 |
+| policy_grounding  | 0.20 | 0.20 | 0.000 |
+| trust_penalty     | 0.638 | 0.649 | +0.011 |
+The gate lifts answer accuracy by 2 points and does nothing measurable for data leakage, refusal, or
+policy grounding. The winner's distinguishing feature does not address any of the enterprise failures
+this benchmark measures.
+
 ## Consistency with the 32-question pilot
 The direction is unchanged from the 32-question v1 (winner near the bottom; all leak; near-zero
 refusal), and the RBAC and refusal gaps are, if anything, sharper on the larger, more role-heavy set.

@@ -461,8 +461,11 @@ def _offline_summary(question: str, sql: str, rows: list[dict], cites: list[dict
 
 def run_chain(question: str,
               history: list[dict] | None = None,
-              on_event: Callable[[TraceEvent], None] | None = None) -> PipelineResult:
+              on_event: Callable[[TraceEvent], None] | None = None,
+              use_validator: bool = True) -> PipelineResult:
     """Process one user turn.
+
+    use_validator : set False to skip the validator gate (for the ablation study).
 
     history : optional list of prior turns, each like
               {"role": "user"|"assistant", "content": str,
@@ -593,13 +596,14 @@ def run_chain(question: str,
             sql_text = _offline_sql(question)
             emit("sql_generate", "warn", "Offline fallback (no API key)")
 
-        # ----- VALIDATOR GATE -----
-        emit("validator", "start")
-        verdict, vmsg = _validate_sql(question, sql_text, schema_block)
-        emit("validator", "ok" if verdict == "APPROVE" else "warn", f"{verdict} {vmsg or ''}")
-        if verdict != "APPROVE" and attempt < 3:
-            last_error = f"Validator rejected: {vmsg}. Address it."
-            continue
+        # ----- VALIDATOR GATE ----- (skippable for the ablation study)
+        if use_validator:
+            emit("validator", "start")
+            verdict, vmsg = _validate_sql(question, sql_text, schema_block)
+            emit("validator", "ok" if verdict == "APPROVE" else "warn", f"{verdict} {vmsg or ''}")
+            if verdict != "APPROVE" and attempt < 3:
+                last_error = f"Validator rejected: {vmsg}. Address it."
+                continue
 
         # ----- EXECUTOR -----
         emit("executor", "start")

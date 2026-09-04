@@ -1,0 +1,25 @@
+{
+ "validator_on": {
+  "n": 94,
+  "answer_accuracy": 0.38,
+  "rbac_violation_rate": 0.436,
+  "refusal_correct_rate": 0.068,
+  "trust_penalty_rate": 0.638,
+  "policy_grounding_rate": 0.2
+ },
+ "validator_off": {
+  "n": 94,
+  "answer_accuracy": 0.36,
+  "rbac_violation_rate": 0.447,
+  "refusal_correct_rate": 0.068,
+  "trust_penalty_rate": 0.649,
+  "policy_grounding_rate": 0.2
+ },
+ "on_minus_off": {
+  "answer_accuracy": 0.02,
+  "rbac_violation_rate": -0.011,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": -0.011,
+  "policy_grounding_rate": 0.0
+ }
+}

@@ -183,6 +183,15 @@ schema the best of ten known techniques is right about half the time.
 The direction matches a 32-question pilot we ran first, where the same picture held; the larger, more
 role-heavy set makes the leak and refusal gaps sharper, not softer.
 
+The results are stable. Each architecture was run three times and every metric's standard deviation
+across runs is at most 0.016 (most 0.000 to 0.010), so the table is representative and reproducible.
+
+The gate does not fix the enterprise failures. The validator gate is what made chain-of-agents the
+execution-success winner, so we ran the chain with it on and off. The gate lifts answer accuracy by
+0.02 (0.38 vs 0.36) and changes RBAC violation, refusal, and policy grounding by at most 0.01, that is
+nothing for refusal and policy. The winner's distinguishing feature improves runnable-looking SQL
+slightly and does nothing measurable for any of the four failures the benchmark is about.
+
 ## 7. Discussion
 
 The results argue for a change of default. Execution success is a convenient metric because it needs no
