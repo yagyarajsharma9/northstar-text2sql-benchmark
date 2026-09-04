@@ -1,92 +1,92 @@
 {
  "arch_01_naive_text2sql": {
-  "n": 32,
-  "answer_accuracy": 0.333,
-  "rbac_violation_rate": 0.281,
+  "n": 94,
+  "answer_accuracy": 0.36,
+  "rbac_violation_rate": 0.457,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.688,
+  "trust_penalty_rate": 0.617,
   "policy_grounding_rate": 0.2,
-  "elapsed_s": 35.9
+  "elapsed_s": 97.3
  },
  "arch_02_schema_rag": {
-  "n": 32,
-  "answer_accuracy": 0.524,
-  "rbac_violation_rate": 0.312,
+  "n": 94,
+  "answer_accuracy": 0.5,
+  "rbac_violation_rate": 0.426,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.5,
-  "policy_grounding_rate": 0.2,
-  "elapsed_s": 36.1
+  "trust_penalty_rate": 0.543,
+  "policy_grounding_rate": 0.1,
+  "elapsed_s": 120.9
  },
  "arch_03_self_correct": {
-  "n": 32,
-  "answer_accuracy": 0.524,
-  "rbac_violation_rate": 0.25,
+  "n": 94,
+  "answer_accuracy": 0.46,
+  "rbac_violation_rate": 0.426,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.531,
-  "policy_grounding_rate": 0.2,
-  "elapsed_s": 50.4
+  "trust_penalty_rate": 0.628,
+  "policy_grounding_rate": 0.1,
+  "elapsed_s": 119.5
  },
  "arch_04_few_shot": {
-  "n": 32,
-  "answer_accuracy": 0.381,
-  "rbac_violation_rate": 0.438,
+  "n": 94,
+  "answer_accuracy": 0.42,
+  "rbac_violation_rate": 0.5,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.625,
+  "trust_penalty_rate": 0.638,
   "policy_grounding_rate": 0.2,
-  "elapsed_s": 38.4
+  "elapsed_s": 111.2
  },
  "arch_06_din_sql": {
-  "n": 32,
-  "answer_accuracy": 0.429,
-  "rbac_violation_rate": 0.219,
+  "n": 94,
+  "answer_accuracy": 0.4,
+  "rbac_violation_rate": 0.404,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.562,
+  "trust_penalty_rate": 0.574,
   "policy_grounding_rate": 0.2,
-  "elapsed_s": 100.9
+  "elapsed_s": 281.1
  },
  "arch_07_dail_c3": {
-  "n": 32,
-  "answer_accuracy": 0.333,
-  "rbac_violation_rate": 0.438,
+  "n": 94,
+  "answer_accuracy": 0.42,
+  "rbac_violation_rate": 0.521,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.688,
+  "trust_penalty_rate": 0.628,
   "policy_grounding_rate": 0.2,
-  "elapsed_s": 44.1
+  "elapsed_s": 115.3
  },
  "arch_05_react_agent": {
-  "n": 32,
-  "answer_accuracy": 0.524,
-  "rbac_violation_rate": 0.281,
+  "n": 94,
+  "answer_accuracy": 0.5,
+  "rbac_violation_rate": 0.436,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.5,
-  "policy_grounding_rate": 0.2,
-  "elapsed_s": 36.0
+  "trust_penalty_rate": 0.543,
+  "policy_grounding_rate": 0.1,
+  "elapsed_s": 99.9
  },
  "arch_08_router_multiagent": {
-  "n": 32,
-  "answer_accuracy": 0.381,
-  "rbac_violation_rate": 0.188,
-  "refusal_correct_rate": 0.273,
-  "trust_penalty_rate": 0.406,
+  "n": 94,
+  "answer_accuracy": 0.44,
+  "rbac_violation_rate": 0.372,
+  "refusal_correct_rate": 0.159,
+  "trust_penalty_rate": 0.457,
   "policy_grounding_rate": 0.0,
-  "elapsed_s": 24.3
+  "elapsed_s": 81.9
  },
  "arch_09_graphrag": {
-  "n": 32,
-  "answer_accuracy": 0.429,
-  "rbac_violation_rate": 0.438,
+  "n": 94,
+  "answer_accuracy": 0.44,
+  "rbac_violation_rate": 0.489,
   "refusal_correct_rate": 0.0,
-  "trust_penalty_rate": 0.562,
-  "policy_grounding_rate": 0.2,
-  "elapsed_s": 36.1
+  "trust_penalty_rate": 0.553,
+  "policy_grounding_rate": 0.1,
+  "elapsed_s": 118.3
  },
  "arch_10_chain_of_agents": {
-  "n": 32,
-  "answer_accuracy": 0.238,
-  "rbac_violation_rate": 0.375,
-  "refusal_correct_rate": 0.091,
-  "trust_penalty_rate": 0.719,
+  "n": 94,
+  "answer_accuracy": 0.38,
+  "rbac_violation_rate": 0.436,
+  "refusal_correct_rate": 0.045,
+  "trust_penalty_rate": 0.638,
   "policy_grounding_rate": 0.2,
-  "elapsed_s": 132.6
+  "elapsed_s": 412.1
  }
 }

@@ -15,11 +15,12 @@ import score
 
 GOLD_RS = json.loads((Path(__file__).resolve().parent / "gold_resultsets.json").read_text())
 
-# map each ROLE_RESTRICTED refuse question to the SQL its allowed twin uses (role-blind leak)
+# map each ROLE_RESTRICTED refuse question to the SQL its allowed twin uses (role-blind leak).
+# keyed by question text, since the allowed and refused variants ask the same question.
 TWIN_SQL = {}
 for q in GOLD:
-    if q["id"].endswith("a"):
-        TWIN_SQL[q["id"][:-1]] = q["gold_sql"]
+    if q["expects"] == "answer" and q.get("gold_sql"):
+        TWIN_SQL[q["question"]] = q["gold_sql"]
 
 
 def perfect_oracle(q):
@@ -32,7 +33,7 @@ def role_blind(q):
     # answer everything it can, ignoring role; for refuse-twins, use the allowed twin's SQL
     if q["gold_sql"]:
         return {"sql": q["gold_sql"], "answer": "results"}
-    twin = TWIN_SQL.get(q["id"][:-1]) if q["id"].endswith("b") else None
+    twin = TWIN_SQL.get(q["question"])   # same question, allowed variant's SQL
     if twin:
         return {"sql": twin, "answer": "results"}      # <-- the RBAC leak
     # unanswerable with no twin: it makes something up but returns nothing runnable
