@@ -1,0 +1,20 @@
+NORTHSTAR PETROLEUM CORPORATION
+EMERGENCY GAS LEAK RESPONSE PROCEDURE
+Document ID: NSP-HSE-PRC-099   Revision: 1.0
+
+CLASSIFICATION:
+Category Alpha:   methane below 1000 ppm OR H2S below 10 ppm
+Category Bravo:   methane 1000-10000 ppm OR H2S 10-50 ppm
+Category Charlie: methane above 10000 ppm OR H2S above 50 ppm OR visible flame
+Category Delta:   large uncontained release with imminent risk to life
+
+IMMEDIATE STEPS for Category Charlie or Delta:
+1. Stop work in the affected zone and surrounding 100 meters.
+2. Evacuate non-essential personnel upwind to the muster point.
+3. Notify the Incident Commander on duty within 5 minutes.
+4. Isolate the source via remote shut-in valves where available.
+5. Do not attempt to ignite or extinguish flames without IC approval.
+
+TIMELINE TARGETS:
+Mean detection-to-isolation: less than 5 minutes for Charlie.
+Recurrence rate same asset:  zero within 12 months after corrective action.

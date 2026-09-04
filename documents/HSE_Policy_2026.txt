@@ -1,0 +1,64 @@
+NORTHSTAR PETROLEUM CORPORATION
+HEALTH, SAFETY AND ENVIRONMENT (HSE) POLICY
+Document ID: NSP-HSE-POL-001
+Revision: 7.2
+Effective Date: 2026-01-01
+Owner: HSE Manager (Henry Nakamura)
+Classification: Public
+
+1. PURPOSE AND SCOPE
+This policy establishes the HSE expectations for all NorthStar Petroleum Corporation
+operations including upstream drilling and production, midstream pipelines, downstream
+refining, and corporate functions. It applies to every employee, contractor, vendor, and
+visitor on company controlled premises and to any person acting on behalf of the company.
+
+2. POLICY STATEMENT
+NorthStar Petroleum is committed to operating in a manner that protects the health and
+safety of people, safeguards the environment, and respects the communities in which we
+operate. We pursue an injury-free, illness-free, and incident-free workplace as a non-
+negotiable business objective.
+
+3. CORE PRINCIPLES
+3.1 Stop Work Authority. Every person has the unconditional right and duty to stop any
+    activity considered unsafe. No retribution shall result from invoking stop-work.
+3.2 Hierarchy of Controls. Hazards shall be addressed through elimination, substitution,
+    engineering controls, administrative controls, and personal protective equipment in
+    that order of preference.
+3.3 Process Safety. We apply API RP 754 leading and lagging indicators to pipelines,
+    refineries, and high consequence wells. Tier 1 and Tier 2 events trigger formal
+    incident investigation under the Incident Response Plan (NSP-HSE-PLN-005).
+3.4 Environmental Stewardship. Spills, fugitive emissions, and exceedances of permitted
+    limits are treated as serious events regardless of regulatory threshold.
+
+4. RESPONSIBILITIES
+4.1 Chief Executive Officer: ultimate accountability; approves the annual HSE plan.
+4.2 Chief Operating Officer: ensures HSE is integrated into all operations decisions.
+4.3 HSE Manager: maintains the management system, leads serious incident investigations,
+    reports to the Board HSE Committee quarterly.
+4.4 Field Supervisors: conduct daily safety briefings, verify permit-to-work, ensure
+    contractors comply with this policy.
+4.5 Every Employee: report all near misses, first aid, and unsafe acts within 24 hours
+    via the incident reporting system.
+
+5. KEY PERFORMANCE INDICATORS
+The following KPIs are reported monthly and reviewed by the Board HSE Committee:
+- Total Recordable Incident Rate (TRIR), target less than 0.20 per 200,000 hours
+- Lost Time Injury Frequency (LTIF), target less than 0.05
+- Process Safety Event Rate Tier 1, target zero
+- Reportable spills > 1 barrel, target zero
+- Methane emissions intensity, target less than 0.20 percent of production
+
+6. NON COMPLIANCE
+Wilful disregard of this policy is grounds for disciplinary action up to termination.
+Contractor companies that breach the policy may have their pre-qualification revoked
+and outstanding purchase orders cancelled.
+
+7. RELATED DOCUMENTS
+- Incident Response Plan NSP-HSE-PLN-005
+- Permit to Work Procedure NSP-HSE-PRC-014
+- Process Safety Management Standard NSP-HSE-STD-022
+- Environmental Management Standard NSP-HSE-STD-031
+
+Approved by: Rachel Mendoza, CEO        Signed: 2026-01-01
+Approved by: Priya Iyer, COO            Signed: 2026-01-01
+Approved by: Henry Nakamura, HSE Mgr    Signed: 2026-01-01

@@ -1,0 +1,63 @@
+NORTHSTAR PETROLEUM CORPORATION
+PRODUCTION DATA VALIDATION PROCEDURE
+Document ID: NSP-PRO-PRC-021
+Revision: 3.4
+Effective Date: 2025-12-01
+Owner: Production Engineering (Aria Kowalski)
+
+1. PURPOSE
+Sets the standard for capturing, validating, and locking daily production volumes for
+oil, gas, and water across all NorthStar operated wells. Validated production figures
+are the basis for royalty payments, reserves reporting, and shareholder disclosure, so
+data integrity is paramount.
+
+2. ROLES
+- Reporter: Field Supervisor or Production Engineer at the asset
+- Validator: Production Engineer designated as VALIDATOR role for the field
+- Approver:  Operations Manager for that field
+
+The reporter, validator, and approver MUST be three different individuals.
+
+3. DAILY CYCLE
+3.1 By 06:00 local, the field operator captures previous day volumes from automation
+    (SCADA) or from manual gauge in the daily_production table.
+3.2 By 09:00 local, the field supervisor reviews and submits the entries.
+3.3 By 12:00 local, the assigned validator runs the validation checks (Section 4).
+3.4 By 17:00 local, the operations manager approves the validated volumes for the
+    field. Once approved, the records are locked.
+
+4. VALIDATION CHECKS
+The validator confirms each daily record passes:
+- Mass balance: oil_bbl + water_bbl matches metered liquid within 2 percent
+- GOR check: gas_mscf divided by oil_bbl within plus or minus 25 percent of the
+  3-day rolling average
+- Runtime: runtime_hours less than or equal to 24
+- Choke and pressure consistency with historical operating envelope
+- Reservoir model alignment: no greater than 30 percent deviation from the latest
+  forecast volume curve maintained by Reservoir Engineering
+
+If any check fails, the record is rejected back to the reporter with a comment in the
+notifications table; the reporter has 24 hours to amend or to escalate.
+
+5. EXCEPTIONS AND DOWNTIME
+For wells with status ShutIn or Suspended, only the runtime hours and pressures are
+required; volumes default to zero. Routine maintenance shutdowns are recorded with the
+work_orders id in the notes field. Unplanned downtime greater than 24 hours triggers
+an incident review.
+
+6. MONTH-END LOCK
+On the third business day of the following month, all daily records for the prior month
+are batch-locked by the system. After lock, changes require an approval workflow
+identical to a Tier 1 AFE.
+
+7. SCADA TIE-IN
+The OSIsoft PI historian is the system of record for raw automation data. The reference
+in external_links provides the audit trail. Discrepancies between SCADA and the
+manual entry greater than 5 percent are flagged for the validator.
+
+8. KPI
+Validation completion rate by 12:00 target: 95 percent of producing wells.
+Average validator turnaround target: less than 3 hours.
+
+Approved: Aria Kowalski, Senior Production Engineer
+Approved: Lucas Murphy, Operations Manager

@@ -1,0 +1,27 @@
+# --- secrets ---
+.env
+.env.*
+*.key
+*.pem
+
+# --- python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+
+# --- generated artifacts ---
+database/oilgas.db
+database/oilgas.db-shm
+database/oilgas.db-wal
+ai_architectures/BENCHMARK_RESULTS.json
+scripts/uvicorn.out
+scripts/uvicorn.err
+
+# --- editor ---
+.vscode/
+.idea/
+*.swp
+.DS_Store

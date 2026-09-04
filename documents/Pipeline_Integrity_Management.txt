@@ -1,0 +1,66 @@
+NORTHSTAR PETROLEUM CORPORATION
+PIPELINE INTEGRITY MANAGEMENT PROGRAM
+Document ID: NSP-MID-PRG-011
+Revision: 3.0
+Effective Date: 2026-03-01
+Owner: Midstream Operations (Ethan Zhao)
+
+1. SCOPE
+This program covers all crude, refined product, gas, and NGL pipelines operated by the
+NorthStar Midstream business unit. It complies with 49 CFR 192 and 195 (US), CSA Z662
+(Canada), and applicable host country regulations.
+
+2. RISK CATEGORIZATION
+Pipelines are categorized into High Consequence Areas (HCA), Moderate, and Low based on
+proximity to populated areas, drinking water sources, ecologically sensitive areas, and
+commercially navigable waterways. Categorization is reviewed every two years or after
+any change in surrounding land use.
+
+3. ASSESSMENT METHODS
+3.1 In-Line Inspection (ILI). Magnetic flux leakage (MFL) and ultrasonic tools deployed
+    on a 5 year cycle for HCA, 7 year for Moderate, 10 year for Low. Results are stored
+    in the inspections table with finding_severity assigned per Section 5.
+3.2 Direct Assessment. ECDA, ICDA, or SCCDA employed where ILI is not feasible.
+3.3 Hydrostatic Pressure Test. Required after major repair or replacement of segments
+    rated for pressure greater than 60 percent of specified minimum yield strength.
+
+4. THRESHOLD VALUES
+A pipeline_segments record with metal loss exceeding 40 percent of nominal wall thickness
+is automatically routed to the Maintenance Repair queue. Loss exceeding 60 percent is
+classified as a critical finding requiring an immediate pressure reduction and an
+emergency work_order with priority Critical.
+
+5. SEVERITY MAPPING
+- None:    No anomaly or anomaly less than 10 percent metal loss
+- Low:     10 to 25 percent
+- Medium:  25 to 40 percent
+- High:    40 to 60 percent
+- Critical: above 60 percent or any leak
+
+6. RESPONSE TIMELINE
+- Critical: act within 24 hours, segment isolation if leak
+- High:    act within 30 days
+- Medium:  schedule within 12 months
+- Low:     monitor at next planned inspection
+
+7. RECORDS AND DATA FLOW
+- Inspection report (PDF) loaded to S3, document_references record created
+- Findings keyed into inspections table and linked via report_external_link_id
+- Repair work_order linked back to pipeline_segments by segment_id
+- KPIs feed the Quarterly Asset Integrity Review
+
+8. EXTERNAL REPORTING
+Reportable conditions are filed with the regulator within the timeframes mandated by the
+applicable rule, generally 30 days for safety related conditions in HCA. The Compliance
+team maintains the regulatory_filings ledger.
+
+9. ROLES
+Pipeline Supervisor (Sara Popov, Tomas Silva): execute field assessments
+Midstream Manager (Ethan Zhao): approves the annual integrity plan
+HSE Manager (Henry Nakamura): independent oversight of critical findings
+Internal Audit: annual program audit
+
+10. KPI
+- Percent of HCA mileage assessed on schedule: target 100 percent
+- Critical findings closed within mandate: target 100 percent
+- Mean time to repair, High severity: target less than 30 days

@@ -1,0 +1,92 @@
+{
+ "arch_01_naive_text2sql": {
+  "n": 32,
+  "answer_accuracy": 0.333,
+  "rbac_violation_rate": 0.281,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.688,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 35.9
+ },
+ "arch_02_schema_rag": {
+  "n": 32,
+  "answer_accuracy": 0.524,
+  "rbac_violation_rate": 0.312,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.5,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 36.1
+ },
+ "arch_03_self_correct": {
+  "n": 32,
+  "answer_accuracy": 0.524,
+  "rbac_violation_rate": 0.25,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.531,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 50.4
+ },
+ "arch_04_few_shot": {
+  "n": 32,
+  "answer_accuracy": 0.381,
+  "rbac_violation_rate": 0.438,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.625,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 38.4
+ },
+ "arch_06_din_sql": {
+  "n": 32,
+  "answer_accuracy": 0.429,
+  "rbac_violation_rate": 0.219,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.562,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 100.9
+ },
+ "arch_07_dail_c3": {
+  "n": 32,
+  "answer_accuracy": 0.333,
+  "rbac_violation_rate": 0.438,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.688,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 44.1
+ },
+ "arch_05_react_agent": {
+  "n": 32,
+  "answer_accuracy": 0.524,
+  "rbac_violation_rate": 0.281,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.5,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 36.0
+ },
+ "arch_08_router_multiagent": {
+  "n": 32,
+  "answer_accuracy": 0.381,
+  "rbac_violation_rate": 0.188,
+  "refusal_correct_rate": 0.273,
+  "trust_penalty_rate": 0.406,
+  "policy_grounding_rate": 0.0,
+  "elapsed_s": 24.3
+ },
+ "arch_09_graphrag": {
+  "n": 32,
+  "answer_accuracy": 0.429,
+  "rbac_violation_rate": 0.438,
+  "refusal_correct_rate": 0.0,
+  "trust_penalty_rate": 0.562,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 36.1
+ },
+ "arch_10_chain_of_agents": {
+  "n": 32,
+  "answer_accuracy": 0.238,
+  "rbac_violation_rate": 0.375,
+  "refusal_correct_rate": 0.091,
+  "trust_penalty_rate": 0.719,
+  "policy_grounding_rate": 0.2,
+  "elapsed_s": 132.6
+ }
+}

@@ -1,0 +1,54 @@
+NORTHSTAR PETROLEUM CORPORATION
+VENDOR ONBOARDING CHECKLIST
+Document ID: NSP-PRC-CHK-002
+Revision: 6.0
+Effective Date: 2026-02-15
+Owner: Procurement (Ava Singh)
+
+PHASE 1 PREQUALIFICATION
+[ ] Complete vendor registration form, capture in vendors table
+[ ] Tax ID and W-8 or W-9 verified
+[ ] Banking details verified by phone callback to a known number
+[ ] Watch list screening: OFAC, EU sanctions, UK sanctions, Canadian sanctions
+[ ] Politically exposed persons screening, refresh every 12 months
+[ ] Modern Slavery Act statement reviewed for vendors above 36 million USD turnover
+[ ] Beneficial ownership disclosure for entities outside FATF aligned jurisdictions
+
+PHASE 2 HSE QUALIFICATION
+[ ] OSHA TRIR for last three years, target less than 1.5
+[ ] EMR (workers compensation experience modifier), target less than 1.0
+[ ] ISO 45001 or equivalent occupational safety management system
+[ ] ISO 14001 or equivalent environmental management system
+[ ] Site visit by HSE officer if vendor will perform work on company premises
+[ ] Methane emissions disclosure for upstream service providers per OGCI guidance
+
+PHASE 3 TECHNICAL QUALIFICATION
+[ ] Reference checks, minimum two operator references in last 24 months
+[ ] Equipment list with maintenance and inspection records
+[ ] Personnel competency records: well control, H2S, confined space, working at height
+[ ] Insurance certificates: CGL 5 million USD per occurrence, professional liability
+    where applicable, environmental impairment for high risk activity
+[ ] Cyber security questionnaire NSP-IT-FRM-009 for IT vendors
+
+PHASE 4 COMMERCIAL
+[ ] Master Services Agreement signed and stored in document_references
+[ ] Pricing schedule and rate card validated against benchmark
+[ ] Payment terms aligned with vendor master, default Net 45
+[ ] Currency confirmation, default USD with FX hedging beyond 90 day exposure
+[ ] Contract record created in contracts table with status Draft
+
+PHASE 5 SYSTEM SETUP
+[ ] Vendor record created in SAP S/4HANA, link saved in external_links
+[ ] Vendor portal account provisioned (e.g. Coupa)
+[ ] Spend categorization in cost_centers
+[ ] Procurement Manager approval recorded via workflow WF-PO-LOW or WF-PO-HIGH
+
+PHASE 6 ACTIVATION
+[ ] First purchase order limited to 250,000 USD until two completed deliveries
+[ ] First invoice cycle reviewed by AP team and noted in audit_log
+[ ] Performance review scheduled at 90 days and 12 months
+
+OWNERSHIP
+Procurement Manager owns this checklist end to end. Items 1, 2, 4 are mandatory
+controls and may not be waived. Items 3 and 5 may be waived only by the Chief
+Operating Officer with documented justification.

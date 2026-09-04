@@ -1,0 +1,92 @@
+Indexing fixture document ...
+  -> extract_id=15, dup=True
+
+
+--- HARD_SQL (7 questions) ---
+  01_naive_text2sql             5/7  avg=   1664ms
+  02_schema_rag                 5/7  avg=   1267ms
+  03_self_correct               4/7  avg=   1360ms
+  04_few_shot                   5/7  avg=   1321ms
+  05_react_agent                5/7  avg=   1686ms
+  06_din_sql                    4/7  avg=   3152ms
+  07_dail_c3                    5/7  avg=   1579ms
+  08_router_multiagent          5/7  avg=   1191ms
+  09_graphrag                   5/7  avg=   1599ms
+  10_chain_of_agents            6/7  avg=   4754ms
+
+--- HARD_DOC (4 questions) ---
+  01_naive_text2sql             0/4  avg=   1490ms
+  02_schema_rag                 0/4  avg=   2346ms
+  03_self_correct               0/4  avg=   1705ms
+  04_few_shot                   0/4  avg=   1335ms
+  05_react_agent                0/4  avg=    905ms
+  06_din_sql                    0/4  avg=   3411ms
+  07_dail_c3                    0/4  avg=   1452ms
+  08_router_multiagent          0/4  avg=    565ms
+  09_graphrag                   0/4  avg=   1395ms
+  10_chain_of_agents            4/4  avg=   1876ms
+
+--- COMPLIANCE (4 questions) ---
+  01_naive_text2sql             0/4  avg=   1460ms
+  02_schema_rag                 1/4  avg=   1036ms
+  03_self_correct               1/4  avg=   1080ms
+  04_few_shot                   1/4  avg=   1238ms
+  05_react_agent                1/4  avg=   1183ms
+  06_din_sql                    1/4  avg=   2618ms
+  07_dail_c3                    1/4  avg=   1234ms
+  08_router_multiagent          1/4  avg=    553ms
+  09_graphrag                   1/4  avg=   1291ms
+  10_chain_of_agents            4/4  avg=   3307ms
+
+--- ADVERSARIAL (4 questions) ---
+  01_naive_text2sql             3/4  avg=   1727ms
+  02_schema_rag                 1/4  avg=   1115ms
+  03_self_correct               2/4  avg=   1849ms
+  04_few_shot                   1/4  avg=   1846ms
+  05_react_agent                1/4  avg=   1607ms
+  06_din_sql                    2/4  avg=   3260ms
+  07_dail_c3                    1/4  avg=   1153ms
+  08_router_multiagent          1/4  avg=    742ms
+  09_graphrag                   2/4  avg=   1704ms
+  10_chain_of_agents            4/4  avg=   4315ms
+
+--- SECURITY (4 questions) ---
+  01_naive_text2sql             1/4  avg=    804ms
+  02_schema_rag                 2/4  avg=    954ms
+  03_self_correct               2/4  avg=    783ms
+  04_few_shot                   1/4  avg=    823ms
+  05_react_agent                2/4  avg=   1091ms
+  06_din_sql                    1/4  avg=   2511ms
+  07_dail_c3                    2/4  avg=   1701ms
+  08_router_multiagent          2/4  avg=    529ms
+  09_graphrag                   2/4  avg=    793ms
+  10_chain_of_agents            3/4  avg=      0ms
+
+--- LONG_MULTI_TURN (15 turns) ---
+  01_naive_text2sql             6/15  (no memory)
+  02_schema_rag                 6/15  (no memory)
+  03_self_correct               6/15  (no memory)
+  04_few_shot                   6/15  (no memory)
+  05_react_agent                6/15  (no memory)
+  06_din_sql                    6/15  (no memory)
+  07_dail_c3                    6/15  (no memory)
+  08_router_multiagent          7/15
+  09_graphrag                   6/15  (no memory)
+  10_chain_of_agents            12/15
+
+====================================================================================================
+Architecture                  HARD  DOC   COMP  ADV   SEC   MULTI    TOTAL    %
+----------------------------------------------------------------------------------------------------
+01_naive_text2sql             5/7   0/4   0/4   3/4   1/4   6/15     15/38      39.5%
+02_schema_rag                 5/7   0/4   1/4   1/4   2/4   6/15     15/38      39.5%
+03_self_correct               4/7   0/4   1/4   2/4   2/4   6/15     15/38      39.5%
+04_few_shot                   5/7   0/4   1/4   1/4   1/4   6/15     14/38      36.8%
+05_react_agent                5/7   0/4   1/4   1/4   2/4   6/15     15/38      39.5%
+06_din_sql                    4/7   0/4   1/4   2/4   1/4   6/15     14/38      36.8%
+07_dail_c3                    5/7   0/4   1/4   1/4   2/4   6/15     15/38      39.5%
+08_router_multiagent          5/7   0/4   1/4   1/4   2/4   7/15     16/38      42.1%
+09_graphrag                   5/7   0/4   1/4   2/4   2/4   6/15     16/38      42.1%
+10_chain_of_agents            6/7   4/4   4/4   4/4   3/4   12/15    33/38      86.8%
+====================================================================================================
+
+Wrote C:\Users\Administrator\Desktop\Aiwrapper\ai_architectures\BENCHMARK_ROUND3_RESULTS.json

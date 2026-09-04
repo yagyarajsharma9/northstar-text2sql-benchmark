@@ -1,0 +1,63 @@
+NORTHSTAR PETROLEUM CORPORATION
+STANDARD OPERATING PROCEDURE
+DRILLING IN HIGH H2S ENVIRONMENTS
+Document ID: NSP-DRL-SOP-018
+Revision: 4.1
+Effective Date: 2025-09-15
+Owner: Drilling Engineering (Amir Haddad)
+
+1. SCOPE
+This SOP applies to drilling, completion, and workover operations on wells where the
+forecast hydrogen sulfide (H2S) concentration in produced fluids may exceed 20 parts per
+million (ppm). It supplements the corporate HSE Policy NSP-HSE-POL-001.
+
+2. CLASSIFICATION
+Wells are classified by the highest expected H2S in mol percent of the gas phase:
+- Sweet:        less than 4 ppm     standard procedures
+- Sour Class 1: 4 to 100 ppm        SOP 018 light controls
+- Sour Class 2: 100 to 1000 ppm     SOP 018 full controls
+- Sour Class 3: above 1000 ppm      SOP 018 full controls plus written deviation
+
+3. PRE-SPUD REQUIREMENTS
+3.1 Hazard analysis: a HAZID and a quantitative risk assessment must be reviewed by
+    the Drilling Engineer of record and signed off by the Operations Manager.
+3.2 Materials: all wellhead, BOP, and downhole tubulars in contact with sour fluids must
+    meet NACE MR0175 requirements. Documentation retained for 25 years.
+3.3 Detection: a minimum of four fixed H2S monitors and one wireless personal monitor per
+    crew member. Alarm set points: low 5 ppm, high 10 ppm, very high 20 ppm.
+3.4 Egress: two upwind muster points, escape breathing apparatus rated 30 minutes,
+    weekly emergency drills.
+
+4. OPERATIONAL CONTROLS
+4.1 Drilling fluid pH must be maintained above 10.5 using lime; sulfide scavenger
+    (zinc carbonate) carried at 2 to 5 lb per barrel.
+4.2 Trip tank monitored continuously; any unexplained gain over 0.5 bbl triggers a flow
+    check and possible shut-in.
+4.3 Flares lit and pilots verified prior to circulating gas to surface.
+4.4 Personnel without current H2S training (per OSHA 29 CFR 1910.120) shall not be on
+    the rig floor during sour intervals.
+
+5. DAILY PRODUCTION DATA HANDLING
+On wells in sour service, the daily production form must record H2S concentration in the
+casinghead gas at minimum once per shift. Values exceeding 100 ppm above the previous
+24-hour rolling average shall be flagged in the production system and validated by the
+Production Engineer before management reporting.
+
+6. INCIDENT RESPONSE
+Any H2S release exceeding 50 ppm at the perimeter, or any personnel exposure above
+10 ppm time-weighted, is classified at minimum SIF3 and escalated immediately to the
+HSE Manager. The well shall be shut in pending investigation.
+
+7. APPROVAL CHAIN FOR DEVIATIONS
+Any deviation from this SOP requires the approval workflow WF-WELL-AFE plus an
+additional sign-off by the HSE Manager. Deviations are recorded in the SCADA system
+with cross reference to the corresponding approval_request record.
+
+8. RECORDS
+Daily drilling reports, mud reports, BOP test certificates, and H2S monitor calibration
+logs are retained for the life of the well plus 10 years in SharePoint and indexed in
+the document_references table.
+
+Approved: Amir Haddad, Senior Drilling Engineer
+Reviewed: Priya Iyer, COO
+Concurred: Henry Nakamura, HSE Manager

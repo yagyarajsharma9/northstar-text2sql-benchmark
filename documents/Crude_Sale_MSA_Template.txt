@@ -1,0 +1,75 @@
+CRUDE OIL SALE AGREEMENT - MASTER TEMPLATE
+Form: NSP-LEG-TPL-CRUDE-MSA-2026
+Owner: Legal (Kira Takahashi)
+
+This Master Sale Agreement ("MSA") is entered into between NorthStar Petroleum
+Corporation ("Seller") and the Buyer named on the cover page. Specific deliveries
+are governed by individual confirmations referencing this MSA.
+
+ARTICLE 1 PRODUCT AND QUALITY
+1.1 The Crude Oil sold under this MSA is identified by NorthStar product code WTI,
+    BRENT, or MARS as applicable. Quality specifications are those published in the
+    most recent crude_assays record for the originating field.
+1.2 If at the point of delivery the API gravity deviates by more than 1.0 degrees from
+    the published assay, the Buyer may either accept with a price adjustment per the
+    standard differential schedule or reject the parcel.
+1.3 Sulfur content above contractual maximum gives Buyer the right to a discount per
+    the differential schedule, or to reject if above 110 percent of maximum.
+
+ARTICLE 2 QUANTITY AND TOLERANCE
+Each confirmation states a nominal volume in barrels and a tolerance, typically plus or
+minus 5 percent at Seller's option. Loaded volume is the basis of invoice unless the
+discharge survey is more than 0.30 percent different, in which case the parties agree
+to the average of load and discharge.
+
+ARTICLE 3 DELIVERY AND TITLE
+Delivery is FOB load port unless the confirmation specifies otherwise. Title and risk
+pass at the flange connection between the loading arm and the vessel manifold.
+
+ARTICLE 4 PRICE
+Unless stated otherwise the price is the average of NYMEX WTI front month settlements
+for the five business days starting on the bill of lading date, plus or minus the
+applicable differential.
+
+ARTICLE 5 PAYMENT
+Payment is by telegraphic transfer in US Dollars to the bank account designated by
+Seller, on the basis of NET 30 days from bill of lading, against presentation of
+commercial invoice and copy of the bill of lading. Late payment accrues interest at
+SOFR plus 2 percent per annum.
+
+ARTICLE 6 DEMURRAGE AND LAYTIME
+Laytime is 36 hours allowed plus 6 hours notice of readiness, unless otherwise stated.
+Demurrage rate is the lower of the charter party rate and the AFRA rate for the
+relevant vessel size class.
+
+ARTICLE 7 FORCE MAJEURE
+Neither party is liable for failure or delay arising from acts of God, war, insurrection,
+strike, governmental action, severe weather, or other event beyond reasonable control.
+Notice must be given within 48 hours.
+
+ARTICLE 8 SANCTIONS AND COMPLIANCE
+Buyer warrants that it is not, and is not owned by, any person on the OFAC SDN list,
+the EU consolidated sanctions list, or the UK HMT financial sanctions list. Buyer will
+provide load port and discharge port and the vessel's IMO and ownership chain prior to
+nomination. Seller may refuse a nomination that fails compliance screening.
+
+ARTICLE 9 ENVIRONMENTAL
+Buyer shall not co-mingle the cargo with any product known to be sourced from
+sanctioned origin. Buyer shall ensure the receiving terminal complies with vapor
+recovery and ballast water regulations applicable at the discharge port.
+
+ARTICLE 10 GOVERNING LAW AND DISPUTES
+Texas law governs (excluding conflicts of laws). Disputes are settled by arbitration
+under the rules of the ICC, seat Houston, in English, by three arbitrators.
+
+ARTICLE 11 NOTICES
+All notices to NorthStar shall be addressed to the General Counsel, with a copy to the
+relationship manager named on the cover page.
+
+ARTICLE 12 ENTIRE AGREEMENT
+This MSA, together with each confirmation, is the entire agreement between the parties
+on the subject matter, superseding prior negotiations and prior agreements.
+
+Signed for NorthStar Petroleum: ________________________
+Signed for Buyer:               ________________________
+Effective Date:                 ________________________

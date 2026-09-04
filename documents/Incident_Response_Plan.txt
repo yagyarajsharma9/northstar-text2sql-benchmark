@@ -1,0 +1,77 @@
+NORTHSTAR PETROLEUM CORPORATION
+INCIDENT RESPONSE PLAN
+Document ID: NSP-HSE-PLN-005
+Revision: 8.0
+Effective Date: 2026-01-15
+Owner: HSE Manager (Henry Nakamura)
+
+1. PURPOSE
+This plan defines NorthStar's response to operational incidents including injuries,
+spills, fires, gas releases, and equipment failures. It assigns responsibility and
+sets expectations for notification, investigation, root cause analysis, and corrective
+actions.
+
+2. INCIDENT CLASSIFICATION
+Severity follows the corporate Significant Injury or Fatality (SIF) framework:
+- SIF1 (Negligible): no injury, no environmental impact, less than 10,000 USD cost
+- SIF2 (Minor):      first aid, minor spill contained, 10,000 to 100,000 USD
+- SIF3 (Moderate):   medical treatment, restricted work, 100,000 to 1,000,000 USD
+- SIF4 (Major):      lost time injury, reportable spill, 1,000,000 to 10,000,000 USD
+- SIF5 (Catastrophic): fatality, major release, above 10,000,000 USD
+
+3. NOTIFICATION TIMELINE
+Within 1 hour:
+- SIF4 and SIF5 to HSE Manager and COO via Push notification
+Within 4 hours:
+- SIF3 to HSE Manager and operations management
+Within 24 hours:
+- All incidents recorded in the incidents table with reported_by_user_id
+- Notification sent to investigated_by_user_id
+
+External notifications shall meet the more stringent of corporate or regulatory
+requirements; the Compliance team holds the master notification matrix.
+
+4. INVESTIGATION
+Every SIF3 and above triggers a formal investigation:
+- Lead investigator assigned within 24 hours
+- TapRoot or 5-Why method used as default; complex cases escalated to ICAM
+- Site preserved until investigators release the scene
+- Final report within 30 days (SIF3) or 60 days (SIF4 and SIF5)
+- root_cause and corrective_actions fields populated and signed off by HSE Manager
+
+5. CORRECTIVE ACTIONS
+Each corrective action is tracked as a work_orders record with priority based on
+severity. Action owners report status weekly until closure. Internal Audit verifies
+closure for SIF3 and above.
+
+6. ENVIRONMENTAL EVENTS
+Spills:
+- Less than 1 bbl: clean up, record in incidents
+- 1 to 50 bbl: notify HSE Manager and regulator if reportable threshold met
+- Greater than 50 bbl: activate Emergency Response Team, evacuate as needed
+Releases:
+- H2S above 100 ppm at perimeter: shut in source, evacuate downwind
+- Methane release above 100 kg or 30 minutes: notify regulator, deploy IR camera
+
+7. COMMUNICATIONS
+The Communications Team is the single point of contact for media. No employee shall
+communicate with media without written authorization. Internal communications use the
+notifications table for affected and adjacent personnel.
+
+8. REGULATORY REPORTING
+Reportable events are filed by Compliance within mandated timeframes. The
+regulatory_filings table records the filing reference and status. External regulator
+links are stored in external_links with system_name set to the agency code.
+
+9. RECORDS RETENTION
+Incident records retained for 30 years. Investigation reports for the life of the
+asset plus 10 years. SIF4 and SIF5 documentation retained permanently.
+
+10. DRILLS
+Quarterly tabletop drills at every operating site. Annual full-scale drill including
+regulators and mutual aid partners. Drill outcomes stored as inspection records of
+type Routine PM with finding_summary describing performance.
+
+Approved: Henry Nakamura, HSE Manager
+Approved: Priya Iyer, COO
+Approved: Rachel Mendoza, CEO

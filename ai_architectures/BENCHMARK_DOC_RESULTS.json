@@ -1,0 +1,3151 @@
+{
+  "fixture": {
+    "extract_id": 14,
+    "document_id": 593,
+    "file_name": "BENCHMARK_FIXTURE_emergency_response.txt",
+    "document_category": "Other",
+    "related_entity_type": null,
+    "char_count": 966,
+    "word_count": 148,
+    "chunk_count": 2,
+    "summary": "NORTHSTAR PETROLEUM CORPORATION\nEMERGENCY GAS LEAK RESPONSE PROCEDURE\nDocument ID: NSP-HSE-PRC-099   Revision: 1.0",
+    "keywords": "category,methane,charlie,below,between,above,delta,within,minutes,northstar,petroleum,corporation",
+    "source_path": "benchmark://BENCHMARK_FIXTURE_emergency_response.txt",
+    "fts_rebuilt": true,
+    "duplicate": false
+  },
+  "suites": {
+    "DB_ONLY": {
+      "01_naive_text2sql": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=2.",
+          "row_count": 1,
+          "elapsed_ms": 2372.75149999914,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=476576.16.",
+          "row_count": 5,
+          "elapsed_ms": 1538.5935999947833,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 1194.5000999985496,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1200.0937999982852,
+          "success": false,
+          "keyword_pass": true,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "02_schema_rag": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=0.",
+          "row_count": 1,
+          "elapsed_ms": 1832.2390999965137,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=476576.16.",
+          "row_count": 5,
+          "elapsed_ms": 1164.4891000032658,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 952.2775000004913,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Returned 68 row(s). First: request_id=1, title=Invoice approval - AP 8531075.0, amount=8531075.06.",
+          "row_count": 68,
+          "elapsed_ms": 1247.0959999991464,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "03_self_correct": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=0.",
+          "row_count": 1,
+          "elapsed_ms": 923.8179999956628,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=476576.16.",
+          "row_count": 5,
+          "elapsed_ms": 2892.945500003407,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 1823.679599998286,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Returned 68 row(s). First: request_id=1, workflow_id=3, entity_type=invoice.",
+          "row_count": 68,
+          "elapsed_ms": 1306.1902999979793,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "04_few_shot": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 957.5836000003619,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_code=BAK-WIL-W005, well_name=BAK-WIL Well 5, total_oil_bbl=476576.2.",
+          "row_count": 5,
+          "elapsed_ms": 1234.4464999987395,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: incident_count=13.",
+          "row_count": 1,
+          "elapsed_ms": 1227.3826000018744,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Returned 200 row(s). First: request_id=494, title=Invoice approval - AR 11881587.0, amount=11881587.18.",
+          "row_count": 200,
+          "elapsed_ms": 1354.1130000012345,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "05_react_agent": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=0.",
+          "row_count": 1,
+          "elapsed_ms": 895.1848999931826,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=476576.16.",
+          "row_count": 5,
+          "elapsed_ms": 1999.1239000009955,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 1254.7517999992124,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Returned 68 row(s). First: request_id=1, workflow_id=3, entity_type=invoice.",
+          "row_count": 68,
+          "elapsed_ms": 1073.5300000014831,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "06_din_sql": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=0.",
+          "row_count": 1,
+          "elapsed_ms": 2749.181099999987,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_id=8, total_oil_production=476576.16.",
+          "row_count": 5,
+          "elapsed_ms": 3879.043200002343,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 2582.9417999993893,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Returned 68 row(s). First: request_id=1, amount=8531075.06, status=Submitted.",
+          "row_count": 68,
+          "elapsed_ms": 2470.57820000191,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "07_dail_c3": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 993.5261999999057,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_code=BAK-WIL-W005, well_name=BAK-WIL Well 5, total_oil_bbl=476576.2.",
+          "row_count": 5,
+          "elapsed_ms": 5432.414599999902,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: incident_count=13.",
+          "row_count": 1,
+          "elapsed_ms": 1070.2290999979596,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Returned 200 row(s). First: request_id=494, title=Invoice approval - AR 11881587.0, amount=11881587.18.",
+          "row_count": 200,
+          "elapsed_ms": 1550.9953000000678,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "08_router_multiagent": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=0.",
+          "row_count": 1,
+          "elapsed_ms": 1668.40830000001,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=476576.16.",
+          "row_count": 5,
+          "elapsed_ms": 1142.0815000019502,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 886.7133000021568,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1796.7445999966003,
+          "success": false,
+          "keyword_pass": true,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "09_graphrag": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "Returned 1 row(s). First: producing_wells_count=0.",
+          "row_count": 1,
+          "elapsed_ms": 1141.4233000032254,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "2"
+          ]
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "Returned 5 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=476576.16.",
+          "row_count": 5,
+          "elapsed_ms": 1225.9979999944335,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "Returned 1 row(s). First: incident_count=13.",
+          "row_count": 1,
+          "elapsed_ms": 815.699400001904,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "Returned 5 row(s). First: workflow_id=3, workflow_code=WF-INV-HIGH, workflow_name=Invoice Approval (over 250k).",
+          "row_count": 5,
+          "elapsed_ms": 1009.5521000039298,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ],
+      "10_chain_of_agents": [
+        {
+          "question": "How many wells are currently producing in the Eagle Ford Permian field?",
+          "answer": "There are currently 2 wells producing in the Eagle Ford Permian field.",
+          "row_count": 1,
+          "elapsed_ms": 2790.929300004791,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Top 5 wells by total oil production in 2025",
+          "answer": "The top five wells by total oil production in 2025 are led by \"BAK-WIL Well 5,\" which produced 476,576.2 barrels of oil. Following closely is \"CAN-ATH Well 3\" with 456,798.3 barrels. \"NS-BRENT Well 3\" produced 416,418.0 barrels, while \"NS-BRENT Well 1\" and \"BAK-WIL Well 6\" produced 337,063.7 and 308,254.7 barrels, respectively. These figures highlight the significant contributions of these wells to NorthStar Petroleum's overall production in 2025.",
+          "row_count": 5,
+          "elapsed_ms": 6370.55490000057,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "How many SIF3 or higher incidents in 2025?",
+          "answer": "In 2025, there were 13 incidents classified as SIF3 or higher in severity.",
+          "row_count": 1,
+          "elapsed_ms": 2608.2879999958095,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "Show pending approval requests over 250000 USD",
+          "answer": "There are 200 pending approval requests with amounts exceeding $250,000, either in the \"Submitted\" or \"InReview\" status. The requests include significant amounts, such as an invoice approval for $19,950,218.06 submitted on June 26, 2023, and another for $12,838,686.01 submitted on May 13, 2023. The requests are sorted by submission date, with the earliest listed being from May 3, 2023, for an amount of $11,881,587.18.",
+          "row_count": 200,
+          "elapsed_ms": 3792.6080000033835,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ]
+    },
+    "DOC_ONLY": {
+      "01_naive_text2sql": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1095.3061999971396,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1233.243599999696,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 916.55670000182,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 940.7548000017414,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "02_schema_rag": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 850.3874999951222,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1276.9388999950024,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 892.6785000003292,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 814.491299999645,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "03_self_correct": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED after 3 attempts: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 3444.438899998204,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1230.2650999990874,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1325.915499997791,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1012.685199995758,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "04_few_shot": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 31874.8706999977,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 871.9983999981196,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1180.2017000009073,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1087.8566999963368,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "05_react_agent": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 1049.5634000035352,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "FAILED: no such column: category",
+          "row_count": 0,
+          "elapsed_ms": 922.4136999982875,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 796.5817000003881,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 860.7228999971994,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "06_din_sql": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 3382.155799998145,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 3315.3966999961995,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 4364.442900005088,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 2833.173300001363,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "07_dail_c3": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 1201.814200001536,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "FAILED: no such table: emergency_procedures",
+          "row_count": 0,
+          "elapsed_ms": 804.7058999945875,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1172.3716000051354,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 7105.410200005281,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "08_router_multiagent": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "See policy: emergency_gas_leak_response.txt",
+          "row_count": 0,
+          "elapsed_ms": 5.307599996740464,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "See policy: emergency_gas_leak_response.txt",
+          "row_count": 0,
+          "elapsed_ms": 4.5662999982596375,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows. See policy: AFE_Approval_Policy.txt",
+          "row_count": 0,
+          "elapsed_ms": 1073.0277999973623,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "See policy: fixture_emergency_doc.txt",
+          "row_count": 0,
+          "elapsed_ms": 4.8724000007496215,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "09_graphrag": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: Only SELECT / WITH / EXPLAIN queries are allowed.",
+          "row_count": 0,
+          "elapsed_ms": 2174.9479999998584,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "FAILED: Only SELECT / WITH / EXPLAIN queries are allowed.",
+          "row_count": 0,
+          "elapsed_ms": 2255.1700999974855,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1081.2566000022343,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "FAILED: Only SELECT / WITH / EXPLAIN queries are allowed.",
+          "row_count": 0,
+          "elapsed_ms": 1170.1237999950536,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "zero",
+            "12 months"
+          ]
+        }
+      ],
+      "10_chain_of_agents": [
+        {
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "I tried 3 times to answer that question with SQL but kept failing. Last error: Execution error: no such table: workflows. Try rephrasing or asking about a specific table.",
+          "row_count": 0,
+          "elapsed_ms": 6965.029899998626,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "incident commander",
+            "5"
+          ]
+        },
+        {
+          "question": "How is Category Bravo defined in the emergency procedure?",
+          "answer": "Category Bravo is defined as a situation where the detected concentration of methane is between 1000 and 10000 ppm or the concentration of H2S is between 10 and 50 ppm (emergency_gas_leak_response.txt).",
+          "row_count": 0,
+          "elapsed_ms": 1006.8481000052998,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "For spending over 1 million USD, the AFE approval policy is as follows:\n\n- **Tier 3: 1,000,000 to 10,000,000 USD**\n  - **Originator:** Department Manager\n  - **Validator:** COO\n  - **Approver:** CFO and CEO (joint)\n  - **Workflow:** WF-WELL-AFE\n\n- **Tier 4: above 10,000,000 USD**\n  - Same as Tier 3, plus Board of Directors approval, recorded by minute resolution. (AFE_Approval_Policy.txt)",
+          "row_count": 0,
+          "elapsed_ms": 1787.87509999529,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "What recurrence rate target is set after corrective action in the emergency procedure?",
+          "answer": "The recurrence rate target set after corrective action in the emergency procedure is zero within 12 months at the same asset (fixture_emergency_doc.txt; BENCHMARK_FIXTURE_emergency_response.txt; emergency_gas_leak_response.txt).",
+          "row_count": 0,
+          "elapsed_ms": 1130.0936999978148,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ]
+    },
+    "MIXED": {
+      "01_naive_text2sql": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: sif3_plus_incidents_2025=0, detection_to_isolation_target=None.",
+          "row_count": 1,
+          "elapsed_ms": 1654.3977000037557,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 2203.831499995431,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_name=BAK-WIL Well 5, total_oil_production=476576.16, validated_days=335.",
+          "row_count": 3,
+          "elapsed_ms": 1816.7921999993268,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "02_schema_rag": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: sif3_plus_incidents_2025=13.",
+          "row_count": 1,
+          "elapsed_ms": 1037.1473999985028,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1106.1543000032543,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_bbl=476576.16.",
+          "row_count": 3,
+          "elapsed_ms": 1591.0665999981575,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "03_self_correct": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 995.1327000017045,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1258.9722000047914,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=476576.16.",
+          "row_count": 3,
+          "elapsed_ms": 2078.873600003135,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "04_few_shot": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: incident_count=13, detection_to_isolation_target=The emergency procedure states that the detection-to-isolation target is 15 minutes for SIF3+ incidents..",
+          "row_count": 1,
+          "elapsed_ms": 1943.7049999978626,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 2675.3081000060774,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_code=BAK-WIL-W005, well_name=BAK-WIL Well 5, total_oil_bbl=476576.2.",
+          "row_count": 3,
+          "elapsed_ms": 2418.717900000047,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "05_react_agent": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: sif3_plus_incidents_2025=13.",
+          "row_count": 1,
+          "elapsed_ms": 910.8311000018148,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1033.9986999970279,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production=438095.04.",
+          "row_count": 3,
+          "elapsed_ms": 2211.129000002984,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "06_din_sql": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: sif3_plus_incidents_2025=13.",
+          "row_count": 1,
+          "elapsed_ms": 2767.5806999977794,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 2954.4590000004973,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_id=8, total_oil_production=438095.04.",
+          "row_count": 3,
+          "elapsed_ms": 4737.960899998143,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "07_dail_c3": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: sif3_plus_incidents=13.",
+          "row_count": 1,
+          "elapsed_ms": 1296.1694000041462,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Returned 200 row(s). First: request_id=494, title=Invoice approval - AR 11881587.0, amount=11881587.18.",
+          "row_count": 200,
+          "elapsed_ms": 1541.1842999965302,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_code=BAK-WIL-W005, well_name=BAK-WIL Well 5, total_oil_bbl=476576.2.",
+          "row_count": 3,
+          "elapsed_ms": 2256.2436000007438,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "08_router_multiagent": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: sif3_plus_incidents_2025=13. See policy: emergency_gas_leak_response.txt",
+          "row_count": 1,
+          "elapsed_ms": 1144.219100002374,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows. See policy: AFE_Approval_Policy.txt",
+          "row_count": 0,
+          "elapsed_ms": 1129.994799994165,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_bbl=438095.04. See policy: Production_Validation_Procedure.txt",
+          "row_count": 3,
+          "elapsed_ms": 1284.240699998918,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "09_graphrag": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "Returned 1 row(s). First: sif3_plus_incidents_2025=13.",
+          "row_count": 1,
+          "elapsed_ms": 1154.2244000011124,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "5 minutes"
+          ]
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 2023.5132000016165,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "Returned 3 row(s). First: well_id=8, well_name=BAK-WIL Well 5, total_oil_production_2025=476576.16.",
+          "row_count": 3,
+          "elapsed_ms": 1750.021600004402,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator",
+            "12:00"
+          ]
+        }
+      ],
+      "10_chain_of_agents": [
+        {
+          "question": "How many SIF3+ incidents in 2025, and what does the emergency procedure say is the detection-to-isolation target?",
+          "answer": "In 2025, there were 13 incidents classified as SIF3 or higher. According to the emergency procedure, the target for detection-to-isolation is 30 minutes. However, for Category Charlie incidents, the mean detection-to-isolation time is targeted to be less than 5 minutes, as noted in the emergency document (fixture_emergency_doc.txt).",
+          "row_count": 1,
+          "elapsed_ms": 8853.231900000537,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "question": "List approval requests pending over 250000 USD - and explain the AFE approval policy for that range",
+          "answer": "There are currently no approval requests pending that exceed 250,000 USD. According to the AFE Approval Policy (AFE_Approval_Policy.txt), for expenditures over this amount, the approval process involves a structured chain of authority. This includes the originator, typically an engineer or supervisor, followed by validation from a cost center owner, and final approval by a department manager. Each request must include comprehensive documentation such as a scope statement, cost breakdown, and risk assessment to ensure compliance with corporate governance and audit standards.",
+          "row_count": 0,
+          "elapsed_ms": 4179.181599996809,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": false,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "question": "Top 3 wells by oil production in 2025 and what does our production validation procedure say about the daily cycle?",
+          "answer": "The top three wells by oil production in 2025 were \"BAK-WIL Well 5\" with 476,576.2 barrels, \"CAN-ATH Well 3\" with 456,798.3 barrels, and \"NS-BRENT Well 3\" with 416,418.0 barrels. Each well had 365 production reports, with \"BAK-WIL Well 5\" having 335 validated reports, \"CAN-ATH Well 3\" having 330, and \"NS-BRENT Well 3\" having 325. According to the Production Validation Procedure, the daily cycle involves capturing production data by 06:00, reviewing and submitting by 09:00, validating by 12:00, and approving by 17:00, ensuring data integrity for critical operations like royalty payments and res",
+          "row_count": 3,
+          "elapsed_ms": 4561.959300001035,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "validator"
+          ]
+        }
+      ]
+    },
+    "MULTI_TURN": {
+      "01_naive_text2sql": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1060.1035999934538,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 1047.2906999930274,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "FAILED: no such column: document_name",
+          "row_count": 0,
+          "elapsed_ms": 1028.9464000015869,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=172.",
+          "row_count": 1,
+          "elapsed_ms": 986.4430000016,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=17.",
+          "row_count": 1,
+          "elapsed_ms": 1510.5390999960946,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED: no such column: document_name",
+          "row_count": 0,
+          "elapsed_ms": 1209.1971000045305,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 956.9475000025705,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 969.1294000003836,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 987.4712999953772,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "02_schema_rag": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 967.2143999996479,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 1080.9497000009287,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 734.7456999996211,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=172.",
+          "row_count": 1,
+          "elapsed_ms": 728.2729999933508,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=17.",
+          "row_count": 1,
+          "elapsed_ms": 732.0333999959985,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED: no such table: incident_response_plan",
+          "row_count": 0,
+          "elapsed_ms": 725.8914999983972,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 794.4769000023371,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1121.331000002101,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1063.7398000035319,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "03_self_correct": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED after 3 attempts: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 3518.2924999971874,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 842.0355999987805,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 955.6463999979314,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=172.",
+          "row_count": 1,
+          "elapsed_ms": 738.665899996704,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=17.",
+          "row_count": 1,
+          "elapsed_ms": 718.2224999996834,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED after 3 attempts: no such table: sif4_incident_response_plan",
+          "row_count": 0,
+          "elapsed_ms": 2358.5660999960965,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 963.7912999969558,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1122.4281000031624,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1276.4728999973158,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "04_few_shot": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 1103.4018999998807,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: incident_count=13.",
+          "row_count": 1,
+          "elapsed_ms": 1014.5579000018188,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1637.870300000941,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: incident_count=172.",
+          "row_count": 1,
+          "elapsed_ms": 796.4638999983435,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: incident_count=6.",
+          "row_count": 1,
+          "elapsed_ms": 1170.2079999959096,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED: no such table: incident_response_plans",
+          "row_count": 0,
+          "elapsed_ms": 871.5018000002601,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1107.4448999934248,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "FAILED: no such column: aw.amount_threshold",
+          "row_count": 0,
+          "elapsed_ms": 1096.6505999967922,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1511.8532000051346,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "05_react_agent": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 929.6029999968596,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 869.2780000055791,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 795.5494999987422,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=172.",
+          "row_count": 1,
+          "elapsed_ms": 785.0274999946123,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=17.",
+          "row_count": 1,
+          "elapsed_ms": 724.6701000040048,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED: no such table: incident_response_plan",
+          "row_count": 0,
+          "elapsed_ms": 781.4655000038329,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 760.2410000035889,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1125.0599000049988,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1139.9717000022065,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "06_din_sql": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 3321.5536999996402,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 2670.4177999999956,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 2954.98100000259,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=172.",
+          "row_count": 1,
+          "elapsed_ms": 2555.1851999989594,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=17.",
+          "row_count": 1,
+          "elapsed_ms": 2526.8942000038805,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED: no such table: incident_response_plan",
+          "row_count": 0,
+          "elapsed_ms": 3390.795999999682,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 3147.667899997032,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 2298.2876999958535,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 3632.8194000016083,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "07_dail_c3": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: no such table: workflows",
+          "row_count": 0,
+          "elapsed_ms": 1137.3486000011326,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: incident_count=13.",
+          "row_count": 1,
+          "elapsed_ms": 1036.1579000018537,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "FAILED: no such column: category",
+          "row_count": 0,
+          "elapsed_ms": 914.8723999969661,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: incident_count=172.",
+          "row_count": 1,
+          "elapsed_ms": 730.1984000005177,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: incident_count=17.",
+          "row_count": 1,
+          "elapsed_ms": 976.0091999996803,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED: no such table: incident_response_plan",
+          "row_count": 0,
+          "elapsed_ms": 823.3781999952043,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1208.3937999996124,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1820.1217000023462,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "FAILED: near \"as\": syntax error",
+          "row_count": 0,
+          "elapsed_ms": 1148.6826999971527,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "08_router_multiagent": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "See policy: emergency_gas_leak_response.txt",
+          "row_count": 0,
+          "elapsed_ms": 5.863799997314345,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: COUNT(*)=13.",
+          "row_count": 1,
+          "elapsed_ms": 862.7178000024287,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "See policy: emergency_gas_leak_response.txt",
+          "row_count": 0,
+          "elapsed_ms": 4.925399996864144,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=172.",
+          "row_count": 1,
+          "elapsed_ms": 758.4686999980477,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: COUNT(*)=17.",
+          "row_count": 1,
+          "elapsed_ms": 729.3092999971122,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "I couldn't classify this question.",
+          "row_count": 0,
+          "elapsed_ms": 794.0727999957744,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows. See policy: AFE_Approval_Policy.txt",
+          "row_count": 0,
+          "elapsed_ms": 4590.287000006356,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1108.6257000060868,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1285.5053000021144,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "09_graphrag": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "FAILED: Only SELECT / WITH / EXPLAIN queries are allowed.",
+          "row_count": 0,
+          "elapsed_ms": 2500.692199995683,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "Returned 1 row(s). First: incident_count=13.",
+          "row_count": 1,
+          "elapsed_ms": 1176.1009999972885,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "FAILED: Only SELECT / WITH / EXPLAIN queries are allowed.",
+          "row_count": 0,
+          "elapsed_ms": 1650.077300000703,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1000",
+            "10000"
+          ]
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "Returned 1 row(s). First: incident_count=172.",
+          "row_count": 1,
+          "elapsed_ms": 997.6880999965942,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Returned 1 row(s). First: severe_incidents_count=17.",
+          "row_count": 1,
+          "elapsed_ms": 956.6351999965264,
+          "supports_history": false,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "FAILED: no such table: incident_response_plan",
+          "row_count": 0,
+          "elapsed_ms": 701.4501000012388,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": false,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 966.694999995525,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1298.4605000019656,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "board"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "Query ran but returned no rows.",
+          "row_count": 0,
+          "elapsed_ms": 1048.6107999968226,
+          "supports_history": false,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "cfo",
+            "ceo"
+          ]
+        }
+      ],
+      "10_chain_of_agents": [
+        {
+          "conversation": 1,
+          "turn": 1,
+          "question": "What are the immediate steps for a Category Charlie gas leak?",
+          "answer": "I tried 3 times to answer that question with SQL but kept failing. Last error: Execution error: no such table: workflows. Try rephrasing or asking about a specific table.",
+          "row_count": 0,
+          "elapsed_ms": 7161.530799996399,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "incident commander"
+          ]
+        },
+        {
+          "conversation": 1,
+          "turn": 2,
+          "question": "Now show me how many SIF3 or higher incidents we had in 2025",
+          "answer": "In 2025, there were 13 incidents classified as SIF3 or higher. This indicates a significant number of severe incidents occurred during that year, which may require further analysis to understand the underlying causes and implement preventive measures.",
+          "row_count": 1,
+          "elapsed_ms": 3016.9085999950767,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 1,
+          "turn": 3,
+          "question": "What about that file again - how is Category Bravo defined?",
+          "answer": "Category Bravo is defined as a gas leak where the concentration of methane is between 1000 and 10000 ppm or the concentration of H2S is between 10 and 50 ppm (emergency_gas_leak_response.txt).",
+          "row_count": 0,
+          "elapsed_ms": 1082.3624000040581,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 1,
+          "question": "How many incidents had cost estimate over 100000 USD?",
+          "answer": "There were 172 incidents with a cost estimate exceeding 100,000 USD.",
+          "row_count": 1,
+          "elapsed_ms": 2778.929499996593,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 2,
+          "question": "And of those, how many were severity SIF4 or SIF5?",
+          "answer": "Out of the 172 incidents with a cost estimate exceeding 100,000 USD, 17 incidents were classified with a severity of SIF4 or SIF5.",
+          "row_count": 1,
+          "elapsed_ms": 7837.633799994364,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 2,
+          "turn": 3,
+          "question": "What does our incident response plan say is the SIF4 notification timeline?",
+          "answer": "I tried 3 times to answer that question with SQL but kept failing. Last error: Execution error: no such table: incident_response_plans. Try rephrasing or asking about a specific table.",
+          "row_count": 0,
+          "elapsed_ms": 5354.222000001755,
+          "supports_history": true,
+          "success": false,
+          "keyword_pass": false,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": [
+            "1 hour"
+          ]
+        },
+        {
+          "conversation": 3,
+          "turn": 1,
+          "question": "What is the AFE approval policy for spending over 1 million USD?",
+          "answer": "For spending over 1 million USD, the AFE approval policy is as follows:\n\n- **Tier 3: 1,000,000 to 10,000,000 USD**\n  - **Originator:** Department Manager\n  - **Validator:** COO\n  - **Approver:** CFO and CEO (joint)\n  - **Workflow:** WF-WELL-AFE\n\n- **Tier 4: above 10,000,000 USD**\n  - Same as Tier 3 plus Board of Directors approval, recorded by minute resolution.\n\n(Reference: AFE_Approval_Policy.tx",
+          "row_count": 0,
+          "elapsed_ms": 1504.9758000022848,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 3,
+          "turn": 2,
+          "question": "And for above 10 million USD, what additional step is required?",
+          "answer": "For spending above 10 million USD, the additional step required is the approval by the Board of Directors, which must be recorded by minute resolution. This is in addition to the approvals required for Tier 3, which include the CFO and CEO (joint approval) and validation by the COO. (Reference: AFE_Approval_Policy.txt)",
+          "row_count": 0,
+          "elapsed_ms": 1412.420700005896,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        },
+        {
+          "conversation": 3,
+          "turn": 3,
+          "question": "So who signs the approval for a 5 million USD AFE specifically?",
+          "answer": "For a 5 million USD AFE, the approval process follows the Tier 3 policy, which requires validation by the COO and joint approval by the CFO and CEO. However, the SQL query returned no specific results for the roles involved, likely due to a mismatch in the workflow configuration or data. According to the AFE approval policy document, these roles are responsible for approvals in this spending range",
+          "row_count": 0,
+          "elapsed_ms": 10382.126399999834,
+          "supports_history": true,
+          "success": true,
+          "keyword_pass": true,
+          "rows_pass": true,
+          "no_error": true,
+          "missing_keywords": []
+        }
+      ]
+    }
+  },
+  "summary": {
+    "01_naive_text2sql": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        6,
+        20
+      ],
+      "pct": 30.0
+    },
+    "02_schema_rag": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        6,
+        20
+      ],
+      "pct": 30.0
+    },
+    "03_self_correct": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        6,
+        20
+      ],
+      "pct": 30.0
+    },
+    "04_few_shot": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          1,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        7,
+        20
+      ],
+      "pct": 35.0
+    },
+    "05_react_agent": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        6,
+        20
+      ],
+      "pct": 30.0
+    },
+    "06_din_sql": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        6,
+        20
+      ],
+      "pct": 30.0
+    },
+    "07_dail_c3": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        6,
+        20
+      ],
+      "pct": 30.0
+    },
+    "08_router_multiagent": {
+      "per_suite": {
+        "DB_ONLY": [
+          2,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        5,
+        20
+      ],
+      "pct": 25.0
+    },
+    "09_graphrag": {
+      "per_suite": {
+        "DB_ONLY": [
+          3,
+          4
+        ],
+        "DOC_ONLY": [
+          0,
+          4
+        ],
+        "MIXED": [
+          0,
+          3
+        ],
+        "MULTI_TURN": [
+          3,
+          9
+        ]
+      },
+      "total": [
+        6,
+        20
+      ],
+      "pct": 30.0
+    },
+    "10_chain_of_agents": {
+      "per_suite": {
+        "DB_ONLY": [
+          4,
+          4
+        ],
+        "DOC_ONLY": [
+          3,
+          4
+        ],
+        "MIXED": [
+          1,
+          3
+        ],
+        "MULTI_TURN": [
+          7,
+          9
+        ]
+      },
+      "total": [
+        15,
+        20
+      ],
+      "pct": 75.0
+    }
+  }
+}

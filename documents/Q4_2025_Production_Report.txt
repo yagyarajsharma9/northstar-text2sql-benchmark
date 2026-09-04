@@ -1,0 +1,69 @@
+NORTHSTAR PETROLEUM CORPORATION
+QUARTERLY PRODUCTION REPORT - Q4 2025
+Document ID: NSP-PRO-RPT-2025-Q4
+Issued: 2026-01-22
+Owner: Production Engineering (Aria Kowalski)
+Distribution: Executive Team, Board, Reservoir Engineering, Investor Relations
+
+EXECUTIVE SUMMARY
+NorthStar produced an aggregate average of 187,400 barrels of oil equivalent per day
+(boe/d) during Q4 2025, a 3.1 percent increase quarter-over-quarter and 8.6 percent
+year-over-year. Liquids accounted for 71 percent of the total. Production beat the
+internal plan of 182,000 boe/d driven by stronger Permian Basin performance and an
+earlier-than-expected restart of two North Sea wells.
+
+KEY METRICS
+Production by stream
+- Crude oil:       109,200 bbl/d   (plan 105,000)
+- NGL:              23,800 bbl/d   (plan 22,500)
+- Natural gas:     327 MMcf/d      (plan 318)
+
+Production by field (oil bbl/d, average)
+- Eagle Ford Permian (PERM-EAG): 56,200
+- Bakken Williston (BAK-WIL):    18,400
+- Mars Deepwater (GOM-MAR):      14,900
+- Brent North Sea (NS-BRENT):     8,600
+- Ghawar South (MID-GHAR):        9,300 (working interest share)
+- Athabasca (CAN-ATH):            1,800
+
+WELL ACTIVITY
+- 7 new producers brought online (5 Permian, 2 Bakken)
+- 12 wells underwent workover, 3 remain shut-in pending parts
+- Average completion cycle time: 41 days, down from 47 days in Q3
+- AFE accuracy: 91.4 percent (target 90 percent)
+
+KEY HSE NOTES
+- TRIR Q4 2025: 0.18 (target less than 0.20)
+- One Tier 2 process safety event (separator overpressure at Eagle Ford), root cause
+  identified, no environmental impact, no injury
+- Two reportable spills, both contained within secondary containment
+- Methane intensity: 0.17 percent, on track for 2026 target
+
+DECLINE ANALYSIS
+The portfolio-level base decline was measured at 19 percent on an annualized basis,
+slightly improved from the 21 percent guided in the 2025 plan. The improvement is
+attributable to optimized choke programs at Eagle Ford and successful gas lift
+installations at three Bakken wells.
+
+FINANCIAL CONSIDERATIONS
+- Average realized crude price: 78.40 USD per bbl
+- Lifting cost: 8.95 USD per bbl, slightly above plan due to weather-related downtime
+- Royalty payments: 41.2 million USD
+- 14 contracts active for crude sales; one master agreement renewed with Phillips 66
+  for 75,000 bbl/d through 2027
+
+DATA QUALITY
+99.6 percent of daily_production records were validated within the procedural SLA. The
+remaining 0.4 percent (mostly Athabasca steam-assisted gravity drainage cells) were
+held due to flow meter calibration drift identified by the validator team.
+
+OUTLOOK Q1 2026
+- Plan: 191,500 boe/d, 2.2 percent higher quarter-on-quarter
+- Risks: pipeline outage on PL-CRUDE-02 scheduled for maintenance week of 2026-02-15;
+  potential weather impact in North Dakota
+- Mitigants: temporary trucking arrangement secured with Vendor VEND-0037
+
+APPROVED
+Aria Kowalski, Senior Production Engineer
+Lucas Murphy, Operations Manager
+David Chen, CFO (financial figures)
